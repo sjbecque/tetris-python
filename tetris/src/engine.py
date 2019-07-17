@@ -1,6 +1,7 @@
 # author: Stephan Becque (https://github.com/sjbecque)
 from threading import Lock, Thread, RLock
 from multiprocessing import Process, Lock
+from tetris.src.game import Game
 import time
 
 class Engine:
@@ -51,16 +52,3 @@ class Engine:
     def time_loop(self):
         return self.__time_loop
 
-class Game:
-    def __init__(self):
-       self.__items = []
-
-    def next_tick(self):
-       self.__items.append("value")
-
-    def process_user_input(self, input):
-        self.__items.append(input)
-
-    @property
-    def items(self):
-        return self.__items

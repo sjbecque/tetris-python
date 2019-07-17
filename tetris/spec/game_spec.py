@@ -1,6 +1,6 @@
 from mamba import description, context, it
 from expects import expect, equal
-from engine import Game
+from tetris.src.game import Game
 
 with description('next_tick') as self:
     with it('adds a value to items'):

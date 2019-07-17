@@ -1,6 +1,6 @@
 from mamba import description, context, it
 from expects import expect, equal
-from engine import Engine
+from tetris.src.engine import Engine
 import time
 
 with description('the engine loops') as self:
