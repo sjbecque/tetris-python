@@ -1,13 +1,13 @@
+# author: Stephan Becque (https://github.com/sjbecque)
 from mamba import description, context, it
 from expects import expect, equal
 from tetris.src.engine import Engine
 import time
 
 with description('the engine loops') as self:
-    with it('successfully produces list items and receives user input'):
-        timeout = 3
-        engine = Engine(True, timeout)
-        time.sleep(3)
-        with engine.mutex:
-            engine.game.process_user_input("input")
-            expect(engine.game.items).to(equal(["value","value","input"]))
+    with it('tells the game periodically to advance to next tick'):
+        subject = Engine(True, True)
+        subject.start()
+        time.sleep(1)
+        expect(subject._Engine__game._Game__tick_count).to(equal(3))
+        subject.stop()

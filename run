@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+from tetris.src.game import Game
+
+from tetris.src.engine import Engine
+
+Engine(False, True).start()
