@@ -7,6 +7,6 @@ Demo of some basic python OOP code, and TDD using [mamba](https://github.com/nes
 
 Type "./run" to start from your termnial.
 
-left/right: keys "4" and "6"
-rotate left/right: keys "1" and "3"
-quit by hitting "q"
+- left/right: keys "4" and "6"
+- rotate left/right: keys "1" and "3"
+- quit by hitting "q"
